@@ -1,0 +1,12 @@
+{
+  "filters": {},
+  "rules": {
+    "textlint-rule-no-dropping-the-ra": true,
+    "textlint-rule-preset-ja-technical-writing": true,
+    "textlint-rule-preset-ja-spacing": {
+      "ja-space-between-half-and-full-width": {
+        "space": "always"
+      }
+    }
+  }
+}
