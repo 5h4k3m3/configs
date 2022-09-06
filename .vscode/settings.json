@@ -8,6 +8,10 @@
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": false,
+  "editor.formatOnType": true,
+  "[html]": {
+    "editor.formatOnSave": true
+  },
   "[graphql]": {
     "editor.formatOnSave": true
   },
@@ -20,18 +24,42 @@
   "[json]": {
     "editor.formatOnSave": true
   },
+  "[jsonc]": {
+    "editor.formatOnSave": true
+  },
   "[typescript]": {
     "editor.formatOnSave": true
   },
   "[typescriptreact]": {
     "editor.formatOnSave": true
   },
+  "[dart]": {
+    "editor.formatOnSave": true
+  },
+  "editor.tabSize": 2,
   "editor.lineNumbers": "on",
   "editor.rulers": [80],
+  "editor.bracketPairColorization.enabled": true,
   "editor.wordWrap": "on",
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "eslint.format.enable": false,
   "eslint.packageManager": "yarn",
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "npm.packageManager": "yarn",
-  "typescript.enablePromptUseWorkspaceTsdk": true
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+
+  // my personal settings
+  "workbench.editor.untitled.hint": "hidden",
+  "workbench.editor.closeEmptyGroups": false,
+  "workbench.startupEditor": "none",
+  "workbench.sideBar.location": "right",
+  "editor.mouseWheelZoom": true,
+  "editor.suggestSelection": "first",
+  "explorer.confirmDragAndDrop": false,
+  "git.autofetch": true,
+  "git.confirmSync": false
 }
