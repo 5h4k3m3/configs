@@ -4,116 +4,159 @@ module.exports = {
     es2021: true,
   },
   extends: [
-    "plugin:react/recommended",
-    "airbnb",
-    "airbnb/hooks",
-    "plugin:import/errors",
-    "plugin:import/warnings",
-    "plugin:import/typescript",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    "prettier",
+    'plugin:react/recommended',
+    'airbnb',
+    'airbnb/hooks',
+    'next/core-web-vitals',
+    'plugin:storybook/recommended',
+    'plugin:import/errors',
+    'plugin:import/warnings',
+    'plugin:import/typescript',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    'prettier',
   ],
-  parser: "@typescript-eslint/parser",
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
     ecmaVersion: 12,
-    project: "./tsconfig.eslint.json",
-    sourceType: "module",
+    project: './tsconfig.eslint.json',
+    sourceType: 'module',
     tsconfigRootDir: __dirname,
   },
   plugins: [
-    "@typescript-eslint",
-    "import",
-    "jsx-a11y",
-    "prefer-arrow",
-    "react",
-    "react-hooks",
+    '@typescript-eslint',
+    'import',
+    'jsx-a11y',
+    'prefer-arrow',
+    'react',
+    'react-hooks',
   ],
   root: true,
   rules: {
     // occur error in `import React from 'react'` with react-scripts 4.0.1
-    "no-use-before-define": "off",
-    "@typescript-eslint/no-use-before-define": ["error"],
-    "lines-between-class-members": [
-      "error",
-      "always",
+    'no-use-before-define': 'off',
+    '@typescript-eslint/no-use-before-define': ['error'],
+    'lines-between-class-members': [
+      'error',
+      'always',
       {
         exceptAfterSingleLine: true,
       },
     ],
-    "no-void": [
-      "error",
+    'no-void': [
+      'error',
       {
         allowAsStatement: true,
       },
     ],
-    "padding-line-between-statements": [
-      "error",
+    'padding-line-between-statements': [
+      'error',
       {
-        blankLine: "always",
-        prev: "*",
-        next: "return",
+        blankLine: 'always',
+        prev: '*',
+        next: 'return',
       },
     ],
-    "@typescript-eslint/no-unused-vars": [
-      "error",
+    'no-restricted-imports': ['error', { patterns: ['../'] }],
+    'import/order': [
+      'warn',
       {
-        vars: "all",
-        args: "after-used",
-        argsIgnorePattern: "_",
+        groups: [
+          'builtin',
+          'external',
+          'internal',
+          'parent',
+          'sibling',
+          'index',
+          'object',
+          'type',
+        ],
+        pathGroups: [
+          {
+            pattern: '{next,next/**,react,react-dom/**,react-router-dom}',
+            group: 'builtin',
+            position: 'before',
+          },
+        ],
+        pathGroupsExcludedImportTypes: ['builtin'],
+        alphabetize: {
+          order: 'asc',
+        },
+        'newlines-between': 'always-and-inside-groups',
+      },
+    ],
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      {
+        vars: 'all',
+        args: 'after-used',
+        argsIgnorePattern: '_',
         ignoreRestSiblings: false,
-        varsIgnorePattern: "_",
+        varsIgnorePattern: '_',
       },
     ],
-    "import/extensions": [
-      "error",
-      "ignorePackages",
+    'import/no-unresolved': 'off',
+    'import/no-extraneous-dependencies': [
+      'error',
       {
-        js: "never",
-        jsx: "never",
-        ts: "never",
-        tsx: "never",
+        devDependencies: [
+          '**/tests/**',
+          '**/__tests__/**',
+          '**/*.test.*',
+          '**/*.stories.*',
+        ],
+        optionalDependencies: false,
       },
     ],
-    "prefer-arrow/prefer-arrow-functions": [
-      "error",
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
+    ],
+    'prefer-arrow/prefer-arrow-functions': [
+      'error',
       {
         disallowPrototype: true,
         singleReturnOnly: false,
         classPropertiesAllowed: false,
       },
     ],
-    "react/jsx-filename-extension": [
-      "error",
+    'react/jsx-filename-extension': [
+      'error',
       {
-        extensions: [".jsx", ".tsx"],
+        extensions: ['.jsx', '.tsx'],
       },
     ],
-    "react/jsx-props-no-spreading": [
-      "error",
+    'react/jsx-props-no-spreading': [
+      'error',
       {
-        html: "enforce",
-        custom: "enforce",
-        explicitSpread: "ignore",
+        html: 'enforce',
+        custom: 'enforce',
+        explicitSpread: 'ignore',
       },
     ],
-    "react/react-in-jsx-scope": "off",
+    'react/react-in-jsx-scope': 'off',
   },
   overrides: [
     {
-      files: ["*.tsx"],
+      files: ['*.tsx'],
       rules: {
-        "react/prop-types": "off",
+        'react/prop-types': 'off',
       },
     },
   ],
   settings: {
-    "import/resolver": {
+    'import/resolver': {
       node: {
-        paths: ["src"],
+        paths: ['src'],
       },
     },
   },
