@@ -1,0 +1,41 @@
+{
+  "recommendations": [
+    // general
+    "ms-ceintl.vscode-language-pack-ja",
+    // theme
+    "robbowen.synthwave-vscode",
+    "pkief.material-icon-theme",
+    "miguelsolorio.fluent-icons",
+    // git
+    "mhutchie.git-graph",
+    "seatonjiang.gitmoji-vscode",
+    // linter
+    "streetsidesoftware.code-spell-checker",
+    "taichi.vscode-textlint",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "stylelint.vscode-stylelint",
+    // html
+    "ritwickdey.liveserver",
+    "formulahendry.auto-rename-tag",
+    // css
+    "styled-components.vscode-styled-components",
+    "bradlc.vscode-tailwindcss",
+    // sass
+    "syler.sass-indented",
+    "glenn2223.live-sass",
+    // react
+    "dsznajder.es7-react-js-snippets",
+    // nextjs
+    "pulkitgangwar.nextjs-snippets",
+    // vue
+    "vue.volar",
+    "dart-code.flutter",
+    // flutter
+    "dart-code.dart-code",
+    // glsl
+    "slevesque.shader",
+    //prisma
+    "prisma.prisma"
+  ]
+}
